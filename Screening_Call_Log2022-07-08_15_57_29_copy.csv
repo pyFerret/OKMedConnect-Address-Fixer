@@ -1,5 +1,5 @@
-﻿UID,"First Name","Last Name","Date of Birth","Date of Service","Pickup Facility","Pickup Address","Destination Facility","Destination Address","Name of Billing Responsibility"
-OMC4103,john,Doe,"Jul 30, 1949",06/20/2022,"SSM St Anthony Downtown","Street name: North Lee Avenue
+﻿"Name of Billing Responsibility",UID,"First Name","Last Name","Date of Birth","Date of Service","Pickup Facility","Pickup Address","Destination Facility","Destination Address"
+"Bridges - Brookwood",OMC4103,john,Doe,"Jul 30, 1949",06/20/2022,"SSM St Anthony Downtown","Street name: North Lee Avenue
 House number: 1000
 City: Oklahoma City
 State: OK
@@ -9,8 +9,8 @@ House number: 940
 City: Oklahoma City
 State: OK
 Postal code: 73139
-Country: United States","Bridges - Brookwood"
-OMC4111,Cheryl,Crowe,"Nov 8, 1949",06/21/2022,Mercy,"Street name: West Memorial Road
+Country: United States"
+Bridges/Timbers,OMC4111,Cheryl,Crowe,"Nov 8, 1949",06/21/2022,Mercy,"Street name: West Memorial Road
 House number: 4300
 City: Oklahoma City
 State: OK
@@ -20,8 +20,8 @@ House number: 2520
 City: Edmond
 State: OK
 Postal code: 73013
-Country: United States",Bridges/Timbers
-OMC4118,Cecil,McCoy,"Jan 4, 1926",06/20/2022,"Bone & Joint","Street name: North Dewey Avenue
+Country: United States"
+"Bridges - Timbers,OMC4118,Cecil,McCoy,"Jan 4, 1926",06/20/2022,"Bone & Joint","Street name: North Dewey Avenue
 House number: 1111
 City: Oklahoma City
 State: OK
@@ -31,4 +31,4 @@ House number: 2520
 City: Edmond
 State: OK
 Postal code: 73013
-Country: United States","Bridges - Timbers"
+Country: United States"
