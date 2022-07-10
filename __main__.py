@@ -3,6 +3,7 @@ import time
 import sys
 import os
 
+
 try:
     process_file = sys.argv[1]
 except IndexError:
@@ -11,7 +12,12 @@ except IndexError:
 
 start_time = time.time()
 
-regex_address = r"Street name: (.+?)\nHouse number: (.+?)\nCity: (.+?)\nState: (.+?)\nPostal code: (.+?)\nCountry:.+?\""
+regex_address = r"Street name: (.+?)\n" \
+                r"House number: (.+?)\n" \
+                r"City: (.+?)\n" \
+                r"State: (.+?)\n" \
+                r"Postal code: (.+?)\n" \
+                r"Country:.+?\""
 subst_address = "\\g<2> \\g<1>, \\g<3>, \\g<4> \\g<5>\""
 
 regex_bridges = r"\"?Bridges(.*?)\"?,"
