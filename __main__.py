@@ -28,8 +28,8 @@ name, ext = os.path.splitext(process_file)
 oldFile = open(process_file, "r")
 newFile = open(name + "_FORMATTED" + ext, "w")
 
-write = re.sub(regex_address, subst_address, oldFile.read(), 0, re.DOTALL)
-write = re.sub(regex_bridges, subst_bridges, write, 0, re.MULTILINE)
+write = re.sub(regex_address, subst_address, oldFile.read(), 0, re.DOTALL | re.VERBOSE)
+write = re.sub(regex_bridges, subst_bridges, write, 0, re.MULTILINE | re.VERBOSE)
 
 newFile.write(write)
 
