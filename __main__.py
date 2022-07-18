@@ -12,11 +12,11 @@ except IndexError:
 
 start_time = time.time()
 
-regex_address = r"Street name: (.+?)\n" \
-                r"House number: (.+?)\n" \
-                r"City: (.+?)\n" \
-                r"State: (.+?)\n" \
-                r"Postal code: (.+?)\n" \
+regex_address = r"Street name:\s{0,}(.+?)\n" \
+                r"House number:\s{0,}(.+?)\n" \
+                r"City:\s{0,}(.+?)\n" \
+                r"State:\s{0,}(.+?)\n" \
+                r"Postal code:\s{0,}(.+?)\n" \
                 r"Country:.+?\""
 subst_address = "\\g<2> \\g<1>, \\g<3>, \\g<4> \\g<5>\""
 
