@@ -20,16 +20,16 @@ regex_address = r"Street name: (.+?)\n" \
                 r"Country:.+?\""
 subst_address = "\\g<2> \\g<1>, \\g<3>, \\g<4> \\g<5>\""
 
-regex_bridges = r"\"?Bridges(.*?)\"?,"
-subst_bridges = "Bridges Health,"
+regex_bridges = r"\"?Bridges(.*?)\n"
+subst_bridges = "Bridges Health,\n"
 
 name, ext = os.path.splitext(process_file)
 
 oldFile = open(process_file, "r")
 newFile = open(name + "_FORMATTED" + ext, "w")
 
-write = re.sub(regex_address, subst_address, oldFile.read(), 0, re.DOTALL | re.VERBOSE)
-write = re.sub(regex_bridges, subst_bridges, write, 0, re.MULTILINE | re.VERBOSE)
+write = re.sub(regex_address, subst_address, oldFile.read(), 0)
+write = re.sub(regex_bridges, subst_bridges, write, 0)
 
 newFile.write(write)
 
