@@ -20,8 +20,8 @@ regex_address = r"Street name:\s{0,}(.+?)\n" \
                 r"Country:.+?\""
 subst_address = "\\g<2> \\g<1>, \\g<3>, \\g<4> \\g<5>\""
 
-regex_bridges = r"\"?Bridges(.*?)\n"
-subst_bridges = "Bridges Health,\n"
+regex_bridges = r"\"?Bridges(.*?),"
+subst_bridges = "Bridges Health,"
 
 name, ext = os.path.splitext(process_file)
 
