@@ -72,24 +72,21 @@ print("■")
 
 print("writing:", end=" ")
 
-oldFile = open(process_file, "r")
-print("■", end="")
 name, ext = os.path.splitext(process_file)
-print("■", end="")
-newFile = open(name + "_FORMATTED" + ext, "w")
-print("■", end="")
+with open(process_file, "r") as oldFile, open(name + "_FORMATTED" + ext, "w") as newFile:
+    print("■", end="")
 
-write = re.sub(regex_address, subst_address, oldFile.read(), 0)
-print("■", end="")
-write = re.sub(regex_bridges, subst_bridges, write, 0)
-print("■", end="")
-write = re.sub(regex_date, subst_date, write, 0)
-print("■", end="")
-write = re.sub(regex_topline, subst_topline, write, 0)
-print("■", end="")
+    write = re.sub(regex_address, subst_address, oldFile.read(), 0)
+    print("■", end="")
+    write = re.sub(regex_bridges, subst_bridges, write, 0)
+    print("■", end="")
+    write = re.sub(regex_date, subst_date, write, 0)
+    print("■", end="")
+    write = re.sub(regex_topline, subst_topline, write, 0)
+    print("■", end="")
 
-newFile.write(write)
-print("■")
+    newFile.write(write)
+    print("■")
 
 
 end_time = time.time()
